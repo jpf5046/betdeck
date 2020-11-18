@@ -1,0 +1,56 @@
+{% extends 'base_layout.html' %}
+{% block title %} matchup {% endblock %} 
+
+{% block content %} 
+
+<div class = "row">
+    <div class = "col-sm">
+        <h1 class = "mb-3"> {{ team_1 }} plays {{ team_2 }} this week </h1>
+    </div>
+</div>
+
+<div class = "row">
+    <div class = "col-sm">
+        {{ team_1 }}
+        <ul>
+            <li>vegas implied score {{ team_1_vi }} (o/u {{ o_u }} )</li>
+            <li>sprad {{ team_1_sp }} at {{ team_1_sp_p }}</li>
+            <li>moneyline is  {{ team_1_ml }}</li>
+        </ul>
+        Trends this season
+        <ul>
+            <li>hits over {{ overs_hit_1 }} out of {{ len_team_1 }} games</li>
+            <li>beats spread {{ beat_spread_1 }} </li>
+            <li>beats moneyline {{ beat_ml_1 }}</li>
+            <li>vegas accuracy {{ vegas_acc_1 | round(2)}}</li>
+        </ul>
+        Opponent Trends this season
+        <ul>
+            <li>opponent vegas accuracy {{ team_1_opp_acc | round(2)}}</li>
+        </ul>
+    </div>
+
+
+    <div class = "col-sm">
+        {{ team_2 }}
+        <ul>
+            <li>vegas implied score {{ team_2_vi }} (o/u {{ o_u }} )</li>
+            <li>spread {{ team_2_sp }} at {{ team_2_sp_p }}</li>
+            <li>moneyline is  {{ team_2_ml }}</li>
+        </ul>
+        Trends this season
+        <ul>
+            <li>hits overs {{ overs_hit_2 }} out of {{ len_team_2 }} games</li>
+            <li>beats spread {{ beat_spread_2 }}</li>
+            <li>beats moneylines {{ beat_ml_2 }}</li>
+            <li>vegas accuracy {{ vegas_acc_2 }}</li>
+        </ul>
+        Opponent Trends this season
+        <ul>
+            <li>opponent vegas accuracy {{ team_2_opp_acc | round(2)}}</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %} 
+

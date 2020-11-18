@@ -1,0 +1,18 @@
+{% extends 'base_layout.html' %}
+{% block title %} Home Page {% endblock %} 
+
+{% block content %} 
+
+<div class = "row">
+    <div class="col">
+        <ul>
+            {% for team in list_of_teams %}
+            <li> <a href="{{ url_for('team_page', team = team ) }} "> view {{ team }} </a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %} 
+

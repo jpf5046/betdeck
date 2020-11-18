@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+{% block title %} {{ team }} {% endblock %} 
+
+{% block content %} 
+
+<div class = "row">
+    <h1>{{ team }}</h1>
+    <br>
+    <div class = "container mt-4">
+        <div class="col">
+            ROI per Standard bets ($100 per bet per week)
+            <ul>
+                 <li> Over/Under ROI: {{ o_u_roi | round(3) }} </li>
+                <li> Spread ROI: {{ spread_roi | round(3) }}</li> 
+                <li> Moneyline ROI: ${{ ml_roi |round(2) }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %} 
+

@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+{% block title %} Home Page {% endblock %} 
+
+{% block content %} 
+
+<div class = "row">
+    <div class = "col-sm">
+        <h1> Welcome to BetDeck</h1>
+        <div>This is the best place to get data on your bets </div>
+    </div>
+    <div class="col">
+        <ul>
+            {% for matchup in list_discriptions %}
+            <li> <a href="{{ url_for('matchup_view', matchup = matchup ) }} "> view {{ matchup }} </a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %} 

@@ -1,0 +1,29 @@
+Week,Date,Time,team,away_indicator,opponent,score,opp_score,yards,turnovers,yards_against,takeaways,home
+11,November 19,8:20PM,Arizona Cardinals,@,Seattle Seahawks,,,,,,,0
+11,November 22,1:00PM,Atlanta Falcons,@,New Orleans Saints,,,,,,,0
+11,November 22,1:00PM,Pittsburgh Steelers,@,Jacksonville Jaguars,,,,,,,0
+11,November 22,1:00PM,Detroit Lions,@,Carolina Panthers,,,,,,,0
+11,November 22,1:00PM,Cincinnati Bengals,@,Washington Football Team,,,,,,,0
+11,November 22,1:00PM,New England Patriots,@,Houston Texans,,,,,,,0
+11,November 22,1:00PM,Philadelphia Eagles,@,Cleveland Browns,,,,,,,0
+11,November 22,1:00PM,Tennessee Titans,@,Baltimore Ravens,,,,,,,0
+11,November 22,4:05PM,Miami Dolphins,@,Denver Broncos,,,,,,,0
+11,November 22,4:05PM,New York Jets,@,Los Angeles Chargers,,,,,,,0
+11,November 22,4:25PM,Green Bay Packers,@,Indianapolis Colts,,,,,,,0
+11,November 22,4:25PM,Dallas Cowboys,@,Minnesota Vikings,,,,,,,0
+11,November 22,8:20PM,Kansas City Chiefs,@,Las Vegas Raiders,,,,,,,0
+11,November 23,8:15PM,Los Angeles Rams,@,Tampa Bay Buccaneers,,,,,,,0
+11,November 19,8:20PM,Seattle Seahawks,@,Arizona Cardinals,,,,,,,1
+11,November 22,1:00PM,New Orleans Saints,@,Atlanta Falcons,,,,,,,1
+11,November 22,1:00PM,Jacksonville Jaguars,@,Pittsburgh Steelers,,,,,,,1
+11,November 22,1:00PM,Carolina Panthers,@,Detroit Lions,,,,,,,1
+11,November 22,1:00PM,Washington Football Team,@,Cincinnati Bengals,,,,,,,1
+11,November 22,1:00PM,Houston Texans,@,New England Patriots,,,,,,,1
+11,November 22,1:00PM,Cleveland Browns,@,Philadelphia Eagles,,,,,,,1
+11,November 22,1:00PM,Baltimore Ravens,@,Tennessee Titans,,,,,,,1
+11,November 22,4:05PM,Denver Broncos,@,Miami Dolphins,,,,,,,1
+11,November 22,4:05PM,Los Angeles Chargers,@,New York Jets,,,,,,,1
+11,November 22,4:25PM,Indianapolis Colts,@,Green Bay Packers,,,,,,,1
+11,November 22,4:25PM,Minnesota Vikings,@,Dallas Cowboys,,,,,,,1
+11,November 22,8:20PM,Las Vegas Raiders,@,Kansas City Chiefs,,,,,,,1
+11,November 23,8:15PM,Tampa Bay Buccaneers,@,Los Angeles Rams,,,,,,,1

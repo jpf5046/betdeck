@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>{% block title %} View Teams {% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <nav class='navbar navbar-light bg-light justify-conent-between'>
+            <a href="/" class='navbar-brand'>Home Page</a>
+            <ul class ="navbar-nav mr-auto">
+                <li>
+                    <a class = "nav-link" href="{{ url_for('teams_page') }}" >Teams</a>
+                </li>
+            </ul>
+            
+        </nav>
+            <div class="container mt-4">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </body>
+    </body>
+</html>
