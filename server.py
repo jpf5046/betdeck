@@ -1,4 +1,5 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
+import requests
 import pandas as pd
 import numpy as np
 app = Flask(__name__)
@@ -7,12 +8,36 @@ df = pd.read_csv('current_week_games.csv')
 results = pd.read_csv('nfl_2020.csv')
 odds = pd.read_csv('week_11_bovada_odds.csv')
 
+###### MAIN PAGES
+# Base Page
+@app.route('/')
+def betdeck_home():
+    temp_df = odds.copy()
+    list_discriptions = temp_df['game_description'].unique()
+    return render_template('index.html', list_discriptions = list_discriptions)
+
+# Matchups
+@app.route('/matchups')
+def matchups_home():
+    temp_df = odds.copy()
+    list_discriptions = temp_df['game_description'].unique()
+    return render_template('matchups.html', list_discriptions = list_discriptions)
+
+# Teams 
+
 @app.route('/teams')
-def teams_page():
+def teams_home():
     temp_df = results.copy()
     list_of_teams = temp_df['team'].unique()
     return render_template('teams.html', list_of_teams=list_of_teams)
 
+# Tends
+@app.route('/trends')
+def trends_home():
+    return render_template('trends.html')
+
+
+###### SUB PAGES
 @app.route('/teams/<team>')
 def team_page(team):
     team_page_df = results.copy()
@@ -24,21 +49,39 @@ def team_page(team):
     spread_roi = team_page_df.sum()['spread_payout']
     # ml_roi
     ml_roi = team_page_df.sum()['moneyline_payout']
+
+    # weeks 
+    team_page_df['Week'] = team_page_df['Week'].astype(str)
+    text_weeks = team_page_df['Week']
+    week_list = []
+    for i in text_weeks:
+        week_list.append('Week ' + str(i))
+
+    # week vegas score
+    vegas_implied = team_page_df['vegas_implied_score']
+    vegas_implied_score = []
+    for i in vegas_implied:
+        vegas_implied_score.append(i)
+
+    # week actual
+    week_actual = team_page_df['score']
+    week_actual_score = []
+    for i in week_actual:
+        week_actual_score.append(i)
+
+    temp_df = results.copy()
+    list_of_teams = temp_df['team'].unique()
+
+
     return render_template('team.html', team=team, 
                             o_u_roi=o_u_roi, spread_roi=spread_roi, 
-                            ml_roi=ml_roi)
+                            ml_roi=ml_roi, list_of_teams=list_of_teams, 
+                            text_weeks=week_list, vegas_implied_score=vegas_implied_score, week_actual_score=week_actual_score) 
 
-@app.route('/')
-def home_page():
-    temp_df = odds.copy()
-    list_discriptions = temp_df['game_description'].unique()
-    return render_template('index.html', list_discriptions = list_discriptions)
 
 
 @app.route('/<matchup>')
 def matchup_view(matchup):
-
-    
     
     temp_df = odds.copy()
     

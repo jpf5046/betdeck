@@ -1,0 +1,20 @@
+<head>
+    <style></style>
+</head>
+
+<ul class ="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link {% if request.url_rule.endpoint == 'betdeck_home' %} active {% endif %} " href="{{ url_for('betdeck_home')}} "> BetDeck</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if request.url_rule.endpoint == 'matchups_home' %} active {% endif %} " href="{{ url_for('matchups_home')}} "> Matchups</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if request.url_rule.endpoint == 'teams_home' %} active {% endif %} " href="{{ url_for('teams_home')}} "> Teams</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% if request.url_rule.endpoint == 'trends_home' %} active {% endif %} " href="{{ url_for('trends_home')}} "> Trends</a>
+    </li>
+
+
+</ul>

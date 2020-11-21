@@ -3,18 +3,20 @@
 
 {% block content %} 
 
+{% include 'includes/index_tabs.html' %}
+
 <div class = "row">
     <div class = "col-sm">
-        <h1 class = "mb-3"> {{ team_1 }} plays {{ team_2 }} this week </h1>
+        <h1 class = "mb-3"> {{ team_1 }} play {{ team_2 }} this week </h1>
     </div>
 </div>
 
 <div class = "row">
     <div class = "col-sm">
-        {{ team_1 }}
+        <h3>{{ team_1 }}</h3>
         <ul>
             <li>vegas implied score {{ team_1_vi }} (o/u {{ o_u }} )</li>
-            <li>sprad {{ team_1_sp }} at {{ team_1_sp_p }}</li>
+            <li>spread {{ team_1_sp }} at {{ team_1_sp_p }}</li>
             <li>moneyline is  {{ team_1_ml }}</li>
         </ul>
         Trends this season
@@ -32,7 +34,7 @@
 
 
     <div class = "col-sm">
-        {{ team_2 }}
+        <h3>{{ team_2 }}</h3>
         <ul>
             <li>vegas implied score {{ team_2_vi }} (o/u {{ o_u }} )</li>
             <li>spread {{ team_2_sp }} at {{ team_2_sp_p }}</li>

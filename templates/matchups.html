@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+{% block title %} Matchups Page {% endblock %} 
+
+{% block content %} 
+
+{% include 'includes/index_tabs.html' %}
+
+<div class="col">
+    <ul>
+        {% for matchup in list_discriptions %}
+        <li> <a href="{{ url_for('matchup_view', matchup = matchup ) }} "> view {{ matchup }} </a> </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %} 
